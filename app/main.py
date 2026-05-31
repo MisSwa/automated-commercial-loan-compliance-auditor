@@ -1,7 +1,14 @@
 import os
 import re
-import streamlit as st
+import sys
+from pathlib import Path
 from datetime import datetime, timezone
+
+# Ensure the project root is on sys.path so `pipeline` is importable
+# regardless of where Streamlit launches the script from.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+import streamlit as st
 from dotenv import load_dotenv
 
 from pipeline.schemas import ComplianceReport

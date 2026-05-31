@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automated Loan Compliance Auditor — Stakeholder Overview</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #f4f5f7;
+      color: #1a1a2e;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .page {
+      background: #fff;
+      width: 100%;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      overflow: hidden;
+    }
+
+    /* Header */
+    .header {
+      background: #1a3a5c;
+      color: #fff;
+      padding: 36px 48px 28px;
+    }
+    .header .bank { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.65; margin-bottom: 8px; }
+    .header h1 { font-size: 28px; font-weight: 700; line-height: 1.2; margin-bottom: 6px; }
+    .header .subtitle { font-size: 14px; opacity: 0.8; }
+    .header .tag {
+      display: inline-block;
+      margin-top: 14px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Body */
+    .body { padding: 36px 48px; }
+
+    /* Problem / Solution row */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+
+    .card {
+      border-radius: 10px;
+      padding: 22px 24px;
+    }
+    .card.problem { background: #fff4f4; border-left: 4px solid #c0392b; }
+    .card.solution { background: #f0f7ff; border-left: 4px solid #1a3a5c; }
+    .card h3 { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; opacity: 0.6; }
+    .card p { font-size: 14px; line-height: 1.65; }
+
+    /* How it works */
+    .section-title {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 14px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .step {
+      background: #f8f9fb;
+      border-radius: 10px;
+      padding: 16px 14px;
+      text-align: center;
+    }
+    .step .num {
+      width: 28px; height: 28px;
+      background: #1a3a5c;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 10px;
+    }
+    .step .label { font-size: 12px; font-weight: 600; margin-bottom: 4px; color: #1a1a2e; }
+    .step .desc { font-size: 11px; color: #666; line-height: 1.4; }
+    .arrow {
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: #ccc; margin-top: 14px;
+    }
+
+    /* Three-column benefits */
+    .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
+
+    .benefit {
+      background: #f8f9fb;
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .benefit .icon { font-size: 22px; margin-bottom: 8px; }
+    .benefit h4 { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+    .benefit p { font-size: 12px; color: #555; line-height: 1.5; }
+
+    /* Safeguards */
+    .safeguards {
+      background: #f0f7ff;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+    .safeguards h3 { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #888; margin-bottom: 14px; }
+    .safeguard-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
+    .safeguard-item { font-size: 13px; color: #1a1a2e; display: flex; align-items: flex-start; gap: 8px; }
+    .safeguard-item .check { color: #1a7a4a; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    /* Status */
+    .status-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; }
+    .status-card {
+      border-radius: 10px;
+      padding: 16px 18px;
+      text-align: center;
+    }
+    .status-card.done { background: #eaf6ef; }
+    .status-card.done .badge { background: #1a7a4a; color: #fff; border-radius: 20px; font-size: 10px; padding: 2px 10px; letter-spacing: 0.5px; display: inline-block; margin-bottom: 8px; }
+    .status-card .phase { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+    .status-card .detail { font-size: 11px; color: #666; }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid #eee;
+      padding: 16px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: #aaa;
+    }
+    .footer strong { color: #555; }
+
+    @media (max-width: 680px) {
+      .body { padding: 24px 20px; }
+      .header { padding: 24px 20px; }
+      .two-col, .three-col, .status-row, .safeguard-list { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .footer { flex-direction: column; gap: 6px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="bank">Meridian Commercial Bank &nbsp;|&nbsp; Internal Initiative</div>
+    <h1>Automated Loan Compliance Auditor</h1>
+    <div class="subtitle">AI-assisted pre-screening for commercial underwriting</div>
+    <div class="tag">Prototype &nbsp;·&nbsp; May 2026</div>
+  </div>
+
+  <div class="body">
+
+    <!-- Problem / Solution -->
+    <div class="two-col">
+      <div class="card problem">
+        <h3>The Problem</h3>
+        <p>Before a commercial loan reaches an underwriter, a compliance officer must manually check every document, verify financial ratios, and flag policy violations. This creates <strong>backlogs, inconsistency, and avoidable errors</strong> — slowing the pipeline and increasing risk.</p>
+      </div>
+      <div class="card solution">
+        <h3>The Solution</h3>
+        <p>A tool that ingests an unstructured loan package, <strong>automatically extracts key data, checks it against the bank's credit policy, and delivers a structured findings report</strong> — ready for a human reviewer in seconds, not hours.</p>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <div class="section-title">How It Works — Five Steps</div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div class="label">Upload</div>
+        <div class="desc">Loan officer uploads the borrower's text file</div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div class="label">Extract</div>
+        <div class="desc">AI reads the document and pulls out key financial data</div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div class="label">Check</div>
+        <div class="desc">Extracted data is compared against the credit policy</div>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <div class="label">Report</div>
+        <div class="desc">A structured findings report is generated with a confidence score</div>
+      </div>
+      <div class="step">
+        <div class="num">5</div>
+        <div class="label">Review</div>
+        <div class="desc">A human reviewer approves, rejects, or requests more info</div>
+      </div>
+    </div>
+
+    <!-- Benefits -->
+    <div class="section-title">What This Delivers</div>
+    <div class="three-col">
+      <div class="benefit">
+        <div class="icon">&#9200;</div>
+        <h4>Speed</h4>
+        <p>Pre-screening that takes hours manually is completed in under a minute, reducing backlog and accelerating deal flow.</p>
+      </div>
+      <div class="benefit">
+        <div class="icon">&#9878;</div>
+        <h4>Consistency</h4>
+        <p>Every loan is checked against the same policy, the same way, every time — eliminating variability across reviewers.</p>
+      </div>
+      <div class="benefit">
+        <div class="icon">&#128196;</div>
+        <h4>Transparency</h4>
+        <p>Every finding cites the specific policy section it came from. Every report includes a confidence score with a full explanation.</p>
+      </div>
+    </div>
+
+    <!-- Safeguards -->
+    <div class="safeguards">
+      <h3>Built-In Safeguards</h3>
+      <div class="safeguard-list">
+        <div class="safeguard-item">
+          <span class="check">&#10003;</span>
+          <span><strong>Human always decides.</strong> The system never approves or rejects a loan. Every report requires a named reviewer to record a decision.</span>
+        </div>
+        <div class="safeguard-item">
+          <span class="check">&#10003;</span>
+          <span><strong>Privacy first.</strong> Borrower data is never stored to disk. The tool warns when a file may contain sensitive personal information.</span>
+        </div>
+        <div class="safeguard-item">
+          <span class="check">&#10003;</span>
+          <span><strong>Transparent when uncertain.</strong> Fields the system could not extract are flagged as "unable to verify" — nothing is silently assumed.</span>
+        </div>
+        <div class="safeguard-item">
+          <span class="check">&#10003;</span>
+          <span><strong>Auditable by design.</strong> Every report carries a timestamp, the AI model used, the policy version queried, and the reviewer's decision.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Status -->
+    <div class="section-title">Project Status</div>
+    <div class="status-row">
+      <div class="status-card done">
+        <div class="badge">COMPLETE</div>
+        <div class="phase">Phase 1 — Foundation</div>
+        <div class="detail">App structure, UI shell, synthetic test data, credit policy indexed for search</div>
+      </div>
+      <div class="status-card done">
+        <div class="badge">COMPLETE</div>
+        <div class="phase">Phase 2 — Intelligence</div>
+        <div class="detail">AI pipeline live: extracts data, checks policy, scores confidence, generates report</div>
+      </div>
+      <div class="status-card done">
+        <div class="badge">COMPLETE</div>
+        <div class="phase">Phase 3 — Polish</div>
+        <div class="detail">Human review workflow, error handling, privacy controls, audit trail, full test coverage</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <span><strong>Meridian Commercial Bank</strong> &nbsp;·&nbsp; Internal Use Only</span>
+    <span>Prototype &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp; All loan decisions remain with human reviewers</span>
+  </div>
+
+</div>
+</body>
+</html>
