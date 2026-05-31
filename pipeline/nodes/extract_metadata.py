@@ -84,7 +84,7 @@ def extract_metadata(state: PipelineState) -> dict:
     client = _get_client()
 
     try:
-        response = client.messages.create(
+        _kwargs = dict(
             model="claude-opus-4-6",
             max_tokens=1024,
             tools=[_EXTRACTION_TOOL],
@@ -101,12 +101,20 @@ def extract_metadata(state: PipelineState) -> dict:
             ],
         )
 
+        response = client.messages.create(**_kwargs)
         tool_block = next(
             (b for b in response.content if b.type == "tool_use"), None
         )
 
         if tool_block is None:
-            errors.append("extract_metadata: Claude returned no tool_use block")
+            # Retry once before falling back
+            response = client.messages.create(**_kwargs)
+            tool_block = next(
+                (b for b in response.content if b.type == "tool_use"), None
+            )
+
+        if tool_block is None:
+            errors.append("extract_metadata: Claude returned no tool_use block after retry")
             extracted: dict = {}
         else:
             extracted = dict(tool_block.input)

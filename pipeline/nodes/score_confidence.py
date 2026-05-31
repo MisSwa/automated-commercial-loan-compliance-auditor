@@ -74,7 +74,7 @@ def score_confidence(state: PipelineState) -> dict:
     client = _get_client()
 
     try:
-        response = client.messages.create(
+        _kwargs = dict(
             model="claude-opus-4-6",
             max_tokens=512,
             tools=[_SCORING_TOOL],
@@ -94,12 +94,20 @@ def score_confidence(state: PipelineState) -> dict:
             ],
         )
 
+        response = client.messages.create(**_kwargs)
         tool_block = next(
             (b for b in response.content if b.type == "tool_use"), None
         )
 
         if tool_block is None:
-            errors.append("score_confidence: Claude returned no tool_use block")
+            # Retry once before falling back
+            response = client.messages.create(**_kwargs)
+            tool_block = next(
+                (b for b in response.content if b.type == "tool_use"), None
+            )
+
+        if tool_block is None:
+            errors.append("score_confidence: Claude returned no tool_use block after retry")
             return {
                 "confidence": {"score": 0, "rationale": "Score unavailable", "factors": []},
                 "errors": errors,

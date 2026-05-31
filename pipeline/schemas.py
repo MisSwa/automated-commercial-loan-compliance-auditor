@@ -6,8 +6,9 @@ This is the single validated output artifact produced by the pipeline.
 Pipeline state uses plain TypedDict; Pydantic is reserved for this schema only.
 """
 
+from datetime import datetime
 from typing import Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class DocumentStatus(BaseModel):
@@ -27,6 +28,8 @@ class Violation(BaseModel):
 
 
 class ComplianceReport(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+
     # Borrower metadata
     borrower_name: Optional[str] = None
     loan_amount: Optional[float] = None
@@ -42,6 +45,7 @@ class ComplianceReport(BaseModel):
     # Confidence
     confidence_score: int = 0
     confidence_rationale: str = ""
+    confidence_factors: list[str] = []
 
     # Recommended next steps (informational only — not a decision)
     recommended_next_steps: list[str] = []
@@ -51,3 +55,9 @@ class ComplianceReport(BaseModel):
 
     # Errors accumulated during the pipeline run (for transparency)
     pipeline_errors: list[str] = []
+
+    # Audit trail
+    generated_at: Optional[datetime] = None
+    model_used: str = "claude-opus-4-6"
+    policy_version: str = "2.1"
+    reviewer_decision: Optional[dict] = None
