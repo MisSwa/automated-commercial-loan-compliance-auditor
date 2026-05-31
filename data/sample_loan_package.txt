@@ -1,0 +1,215 @@
+COMMERCIAL LOAN APPLICATION PACKAGE
+Submitted To: Meridian Commercial Bank — Commercial Lending Division
+Date of Submission: April 15, 2026
+Originating Loan Officer: Marcus T. Williams (NMLS #4821039)
+Package Reference: HLP-2026-0415
+
+================================================================================
+SECTION A: BORROWER INFORMATION
+================================================================================
+
+Applicant / Borrower Entity:
+  Legal Name:            Hartfield Logistics Partners, LLC
+  EIN:                   47-3829104
+  Entity Type:           Limited Liability Company
+  Date of Organization:  March 12, 2018
+  State of Formation:    Delaware
+  Primary Operating State: Georgia
+  Additional States:     Tennessee, North Carolina
+  Business Address:      1180 Southgate Commerce Blvd, Suite 200, Lithonia, GA 30058
+
+Principal / Guarantor Information:
+
+  Principal 1:
+    Name:                   Robert J. Hartfield
+    Title:                  Managing Member
+    Ownership Interest:     65%
+    Years in Industry:      14
+    Personal Credit Score:  712 FICO (pulled March 2026, Equifax middle score)
+    SSN (last 4):           XXXX (full SSN on file with credit authorization)
+
+  Principal 2:
+    Name:                   Sandra M. Okafor
+    Title:                  Member
+    Ownership Interest:     35%
+    Years in Industry:      9
+    Personal Credit Score:  698 FICO (pulled March 2026, Equifax middle score)
+    SSN (last 4):           XXXX (full SSN on file with credit authorization)
+
+Business Description:
+  Hartfield Logistics Partners, LLC operates a third-party logistics (3PL)
+  warehousing and distribution facility in DeKalb County, Georgia. The company
+  has operated continuously under current ownership since 2018, providing
+  regional warehousing, pick-and-pack fulfillment, and last-mile distribution
+  services. Primary clients include regional grocery distributors and
+  e-commerce fulfillment contracts. The company employs 34 full-time staff.
+
+================================================================================
+SECTION B: LOAN REQUEST DETAILS
+================================================================================
+
+  Loan Purpose:              Acquisition of industrial warehouse facility
+  Property Address:          4820 Southgate Industrial Drive, Lithonia, GA 30058
+  Property Type:             Industrial / Warehouse (single-tenant, NNN lease structure)
+
+  Requested Loan Amount:     $4,200,000
+  Borrower Equity / Down:    $800,000  (16% of purchase price)
+  Total Purchase Price:      $5,000,000
+
+  Requested Loan Term:       7 years
+  Requested Amortization:    25 years
+  Rate Structure:            Fixed rate (preferred)
+  Estimated Rate:            6.75% (for illustration purposes)
+  Estimated Monthly Payment: $23,150
+  Estimated Annual Debt Service (proposed): $277,800
+
+================================================================================
+SECTION C: FINANCIAL SUMMARY
+================================================================================
+
+Business Financial Performance — Hartfield Logistics Partners, LLC:
+
+  Fiscal Year 2022:
+    Gross Revenue:                $3,410,000
+    Total Operating Expenses:     $2,820,000
+    Net Operating Income (NOI):   $  590,000
+    Existing Debt Service:        $  200,400
+    DSCR (existing debt only):          1.48x
+
+  Fiscal Year 2023:
+    Gross Revenue:                $3,840,000
+    Total Operating Expenses:     $3,105,000
+    Net Operating Income (NOI):   $  735,000
+    Existing Debt Service:        $  200,400
+    DSCR (existing debt only):          1.67x
+
+  Fiscal Year 2024:
+    Gross Revenue:                $4,120,000
+    Total Operating Expenses:     $3,380,000
+    Net Operating Income (NOI):   $  740,000
+    Existing Debt Service:        $  200,400
+    DSCR (existing debt only):          1.69x
+
+  Pro Forma — Projected Year 2026 (post-acquisition):
+    Gross Revenue (projected):    $4,350,000
+    Total Operating Expenses:     $3,540,000
+    Net Operating Income (NOI):   $  810,000
+    Proposed New Debt Service:    $  277,800
+    Existing Debt Service:        $  200,400
+    Total Annual Debt Service:    $  478,200
+    Combined DSCR (pro forma):          1.10x   <-- BORROWER-CALCULATED
+
+  NOTE FROM LOAN OFFICER: The combined DSCR of 1.10x on the pro forma falls
+  below the bank's standard minimum threshold of 1.25x. The borrower contends
+  that the NOI projection of $810,000 is conservative and expects revenue growth
+  of 8-10% in 2026 based on a signed contract with a new e-commerce client
+  (contract copy attached separately). Even applying the borrower's upside
+  scenario ($900,000 NOI), the combined DSCR would reach approximately 1.22x,
+  which remains below the 1.25x policy minimum.
+
+Guarantor Financial Summary (Combined — R. Hartfield + S. Okafor):
+  Estimated Combined Net Worth:         $5,200,000
+  Verified Liquid Assets (post-closing): $  490,000
+  Liquid Asset Ratio vs. Loan:                11.7%  (minimum required: 10%)
+
+================================================================================
+SECTION D: COLLATERAL DESCRIPTION
+================================================================================
+
+  Property Address:       4820 Southgate Industrial Drive, Lithonia, GA 30058
+  Building Type:          Tilt-up concrete industrial warehouse
+  Year Built:             2007
+  Total Building Area:    68,500 square feet
+  Clear Height:           28 feet
+  Loading Configuration:  12 dock-high doors, 2 grade-level doors
+  Office Component:       3,200 sq ft (integrated, climate-controlled)
+  Lot Size:               5.4 acres
+  Zoning:                 M-1 Light Industrial (DeKalb County)
+  Current Occupancy:      100% — sole tenant (Hartfield Logistics Partners, LLC)
+  Lease Structure:        NNN, borrower occupies as owner-user post-acquisition
+
+  Appraisal Information:
+    Appraised Value:      $5,600,000
+    Appraisal Type:       MAI-Certified, as-is market value
+    Appraisal Firm:       Southeast Commercial Appraisers, Inc.
+    Appraiser Name:       David R. Kessler, MAI
+    Appraisal Date:       February 28, 2026
+
+  Loan-to-Value Analysis:
+    Requested Loan:       $4,200,000
+    Appraised Value:      $5,600,000
+    Purchase Price:       $5,000,000
+    LTV (vs. appraised):  75.0%
+    LTV (vs. purchase):   84.0%   <-- BASED ON PURCHASE PRICE
+
+  NOTE FROM LOAN OFFICER: LTV based on appraised value is 75.0%, which meets
+  the policy maximum of 75% for investment/industrial CRE. However, LTV based
+  on purchase price is 84.0%. Per policy Section 2.3, LTV must be calculated
+  on the lesser of appraised value or purchase price. The lower is the
+  purchase price ($5,000,000), making the effective LTV 84.0%, which exceeds
+  the 75% policy maximum for this collateral type.
+
+================================================================================
+SECTION E: DOCUMENT CHECKLIST
+================================================================================
+
+The following documents are included in or referenced by this submission:
+
+  Business Financial Documents:
+    [X] Business tax returns — 2022, 2023, 2024 (all signed)
+    [X] Business financial statements — 2022, 2023, 2024
+    [X] YTD Profit & Loss Statement (as of March 31, 2026)
+    [X] YTD Balance Sheet (as of March 31, 2026)
+
+  Personal Documents (Both Principals):
+    [X] Personal tax returns — R. Hartfield (2023, 2024)
+    [X] Personal tax returns — S. Okafor (2023, 2024)
+    [X] Personal financial statements — both principals (dated April 2026)
+    [X] Government-issued photo ID — both principals
+    [X] Signed credit authorization — both principals
+
+  Property and Collateral Documents:
+    [X] MAI-Certified Appraisal (Southeast Commercial Appraisers, February 2026)
+    [ ] Phase I Environmental Site Assessment — PENDING (ordered April 10, 2026;
+        expected delivery April 30, 2026 per vendor confirmation email on file)
+    [X] Property insurance commitment (binder dated April 12, 2026)
+    [X] Executed Purchase Agreement (dated March 3, 2026)
+
+  Entity Documents:
+    [X] Articles of Organization (Delaware, filed March 2018)
+    [X] Operating Agreement (executed March 2018, amended January 2022)
+    [X] Certificate of Good Standing — Delaware (issued April 1, 2026)
+    [X] Certificate of Incumbency (executed April 14, 2026)
+
+================================================================================
+SECTION F: LOAN OFFICER NOTES AND INTAKE SUMMARY
+================================================================================
+
+Compliance Flags Identified at Intake:
+
+  1. DSCR DEFICIENCY: The combined pro forma DSCR of 1.10x falls below the
+     policy minimum of 1.25x (Section 1.1) and below the exception floor of
+     1.15x (Section 1.3). Under current policy, a DSCR below 1.15x renders
+     the loan ineligible regardless of compensating factors. The borrower's
+     optimistic scenario yields 1.22x, still below the standard minimum.
+
+  2. LTV DEFICIENCY: Per policy Section 2.3, LTV must be calculated against
+     the lesser of appraised value or purchase price. Using the purchase price
+     of $5,000,000, the effective LTV is 84.0%, exceeding the 75% policy
+     maximum for industrial/warehouse collateral (Section 2.1).
+
+  3. MISSING DOCUMENT: Phase I Environmental Site Assessment has not been
+     received. This is a required document under Section 3.3 of the credit
+     policy. A conditional review has been requested by the borrower pending
+     receipt by April 30, 2026.
+
+  No other compliance concerns were identified at intake.
+  Business sector (logistics/warehousing) is not a restricted or elevated-risk
+  sector per Section 5. Borrower credit scores meet minimum thresholds
+  (Section 4.1). Business operating history exceeds the 2-year minimum
+  (Section 4.2). Post-closing liquidity is marginally sufficient at 11.7%
+  vs. the 10% minimum (Section 4.3).
+
+================================================================================
+END OF LOAN PACKAGE — HLP-2026-0415
+================================================================================
