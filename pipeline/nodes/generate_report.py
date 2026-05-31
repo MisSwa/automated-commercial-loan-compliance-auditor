@@ -7,11 +7,14 @@ Sets is_partial=True if any required metadata field is None.
 On Pydantic ValidationError, returns a minimal partial report rather than raising.
 """
 
+from datetime import datetime, timezone
 from pydantic import ValidationError
 from pipeline.state import PipelineState
 from pipeline.schemas import ComplianceReport, CovenantCheck, DocumentStatus, Violation
 
 _REQUIRED_FIELDS = ["borrower_name", "loan_amount", "dscr", "ltv", "industry"]
+_MODEL_USED = "claude-opus-4-6"
+_POLICY_VERSION = "2.1"
 
 
 def generate_report(state: PipelineState) -> dict:
@@ -56,9 +59,13 @@ def generate_report(state: PipelineState) -> dict:
             violations=violations,
             confidence_score=int(confidence.get("score", 0)),
             confidence_rationale=confidence.get("rationale", ""),
+            confidence_factors=list(confidence.get("factors", [])),
             recommended_next_steps=compliance.get("recommended_next_steps") or [],
             is_partial=is_partial,
             pipeline_errors=errors,
+            generated_at=datetime.now(timezone.utc),
+            model_used=_MODEL_USED,
+            policy_version=_POLICY_VERSION,
         )
         return {"report": report, "errors": errors}
 
@@ -68,5 +75,8 @@ def generate_report(state: PipelineState) -> dict:
             borrower_name=metadata.get("borrower_name"),
             is_partial=True,
             pipeline_errors=errors,
+            generated_at=datetime.now(timezone.utc),
+            model_used=_MODEL_USED,
+            policy_version=_POLICY_VERSION,
         )
         return {"report": partial, "errors": errors}

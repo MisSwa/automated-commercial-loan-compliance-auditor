@@ -125,7 +125,7 @@ def check_compliance(state: PipelineState) -> dict:
     client = _get_client()
 
     try:
-        response = client.messages.create(
+        _kwargs = dict(
             model="claude-opus-4-6",
             max_tokens=2048,
             tools=[_COMPLIANCE_TOOL],
@@ -151,12 +151,20 @@ def check_compliance(state: PipelineState) -> dict:
             ],
         )
 
+        response = client.messages.create(**_kwargs)
         tool_block = next(
             (b for b in response.content if b.type == "tool_use"), None
         )
 
         if tool_block is None:
-            errors.append("check_compliance: Claude returned no tool_use block")
+            # Retry once before falling back
+            response = client.messages.create(**_kwargs)
+            tool_block = next(
+                (b for b in response.content if b.type == "tool_use"), None
+            )
+
+        if tool_block is None:
+            errors.append("check_compliance: Claude returned no tool_use block after retry")
             return {"compliance_results": dict(_EMPTY_RESULTS), "errors": errors}
 
         results: dict = dict(tool_block.input)
