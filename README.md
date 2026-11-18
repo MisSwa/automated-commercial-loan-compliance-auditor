@@ -4,6 +4,16 @@ A Streamlit prototype that ingests an unstructured commercial loan package, extr
 
 > **The system never approves or rejects a loan.** All findings are surfaced to a named human reviewer who records the final decision.
 
+## At a glance
+
+| | |
+|---|---|
+| **Problem** | Credit analysts manually check unstructured loan packages against bank credit policy |
+| **What it does** | Extracts loan metadata (DSCR, LTV, amount), retrieves relevant policy via RAG, flags violations, and scores confidence 0–100 |
+| **How** | Five-node LangGraph pipeline using Claude structured tool use and a Chroma vector store; output validated with Pydantic |
+| **Safety** | Never approves or rejects; PII detection, no borrower data persisted, explicit handling for every failure mode |
+| **Stack** | Python · LangGraph · Claude · Chroma · sentence-transformers · Pydantic · Streamlit · LangSmith · pytest (50 tests) |
+
 ---
 
 ## What it does
@@ -33,7 +43,7 @@ A Streamlit prototype that ingests an unstructured commercial loan package, extr
 
 ```bash
 # 1. Clone the repository
-git clone <repo-url>
+git clone https://github.com/MisSwa/automated-commercial-loan-compliance-auditor.git
 cd automated-commercial-loan-compliance-auditor
 
 # 2. Create and activate a virtual environment
